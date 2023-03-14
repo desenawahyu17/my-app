@@ -84,12 +84,12 @@ export default class App extends React.Component {
     const poke = this.state.search.length > 0 ? this.state.search : this.state.pokemons;
     return (
       <>
+        <Navbar />
         <Container>
-          <Navbar title="PokeApi"></Navbar>
           <Search onHandleSearch={this.handleSearch} />
           {this.state.notFound ? <div>'Pokemon not found'</div> : <Grid pokemons={poke} next={this.nextPokemon} />}
         </Container>
-        <Footer></Footer>
+        <Footer />
       </>
     );
   }

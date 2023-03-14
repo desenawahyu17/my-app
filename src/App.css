@@ -397,8 +397,8 @@ body{
 
 .footer{
   margin-top: auto;
-  background-color: var(--bg-dark-color);
-  color: lightseagreen;
+  background-color: #22668A;
+    color: #fff;
   padding: 12px 0;
   text-align: center;
 }

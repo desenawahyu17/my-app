@@ -29,20 +29,16 @@ export default class Search extends React.Component{
   }
 
   render(){
-    return(
-      <div className='search'>
+    return (
+      <div className="search">
         <div className="search__wrapper">
-          <input className='search__input' 
-            type="search"
-            onChange={this.handleSearch}
-            placeholder='Search your pokemon ... 😏'
-            onKeyDown={this.handleClickSearch}
-            autoFocus
-          />
-          <img className='search__icon' src={SearchIcon} alt="" />
+          <input className="search__input" type="search" onChange={this.handleSearch} placeholder="Search your pokemon ..." onKeyDown={this.handleClickSearch} autoFocus />
+          <img className="search__icon" src={SearchIcon} alt="" />
         </div>
-        <button className='search__button' onClick={this.handleClickSearch}>Search</button>
+        <button className="search__button" onClick={this.handleClickSearch}>
+          Search
+        </button>
       </div>
-    )
+    );
   }
 }
