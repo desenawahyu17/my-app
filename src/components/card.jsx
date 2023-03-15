@@ -22,15 +22,13 @@ export default class Card extends React.Component{
   }
 
   render(){
-    
     const {pokemon} = this.props;
- 
     return(
       <>
         <div className='card' onClick={this.handleModal} style={{ backgroundColor: `var(--bg-poke-color-light-${pokemon.types[0].type.name})`}}>
           <div className='card__title'>
             <img className='card__title-img' src={PokeballImage} alt="" />
-            <span className='card__title-text'>{`#${pokemon.order}`}</span>
+            <span className='card__title-text'>{`#${pokemon.id}`}</span>
           </div>
           <div className="card__badge" style={{ backgroundColor: `var(--bg-poke-color-dark-${pokemon.types[0].type.name})`}}>
             <img className='card__badge-Icon' src={searchIcon(pokemon.types[0].type.name)} alt="" />

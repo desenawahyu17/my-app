@@ -292,6 +292,12 @@ body{
   background-color: rgba(247, 242, 242, 0.961);
 }
 
+.custom-modal .modal-header {
+  border: 0;
+  justify-content: center;
+  padding: 30px 30px 0;
+}
+
 .modal__content-descriptionTitle{
   font-size: 1.4em;
   text-transform: uppercase;
@@ -381,14 +387,20 @@ body{
 }
 
 .modal__close{
+  background-color: #73b4e2;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
   position: absolute;
-  top: -25px;
   right: 10px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  z-index: 11;
-  font-size: 1.1em;
+  top: 10px;
+  width: 20px;
+  z-index: 99;
 }
 
 .modal__close:hover{

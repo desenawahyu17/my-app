@@ -21,6 +21,12 @@ export default class App extends React.Component {
     this.nextPokemon = this.nextPokemon.bind(this);
   }
 
+  componentDidMount() {
+    if (!this.state.searching) {
+      this.showPokemons();
+    }
+  }
+  
   async handleSearch(textSearch) {
     if (!textSearch) {
       this.setState({
@@ -72,12 +78,6 @@ export default class App extends React.Component {
 
   nextPokemon() {
     this.showPokemons(20, this.state.total);
-  }
-
-  componentDidMount() {
-    if (!this.state.searching) {
-      this.showPokemons();
-    }
   }
 
   render() {

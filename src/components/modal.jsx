@@ -17,24 +17,20 @@ export default class Modal extends React.Component{
  
     return(
       <div className='modal'>
-        <button className='modal__close' onClick={this.handleModal}>Close X</button>
         <div className='modal__content'>
           <div className="modal__content-features" style={{backgroundColor: `var(--bg-poke-color-dark-${pokemon.types[0].type.name})`}}>
             <div className="modal__content-featuresRight">
               <span className='modal__content-featuresHabitat'>
                 <img className='modal__content-featuresImage' src={searchIcon(pokemon.types[0].type.name)} alt="" />
-                {/* {pokemon.types[0].type.name} */}
               </span>
               {
                 pokemon['past_types'].length > 0 && <span className='modal__content-featuresGeneration'>{pokemon['past_types'][0].generation.name}</span>
               }
             </div>
             <div className="modal__content-featuresLeft">
+          <button className='modal__close' onClick={this.handleModal}>x</button> <br />
               <span className='modal__content-featuresHeight'>Height: {pokemon.height}</span>
               <span className='modal__content-featuresWeight'>weight : {pokemon.weight}</span>
-              {/* {
-                pokemon['past_types'].length > 0 && <span className='modal__content-featuresGeneration'>{pokemon['past_types'][0].generation.name}</span>
-              } */}
             </div>
           </div>
           <div className="modal__content-description">
